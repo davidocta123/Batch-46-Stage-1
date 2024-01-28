@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+    .container{
+        margin: 0 10%;
+    }
+
+    
+    
+    @media only screen and (max-width:650px) {
+        .bodyProj{
+            display: flex;
+            flex-direction: column;
+            margin: 0%
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            margin: 0 10%;
+            gap: 10px;
+        }
+}
+
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <body class="" onload="test()">
+        <nav>
+            <div class="nav-left">
+                <ul>
+                    <img class="dumbLogo" src="./assets/logo.png" alt="logo" >
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./blog.html" class="active">Blog</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div>
+                    <a class="right" href="./contact.html">Contact Me</a>
+                </div>
+                <div class="burger" >
+                    <button id="button" href="" class="toggle-button" >
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="mobileNav" id="mobileNav">
+            <a href="./index.html">Home</a>
+            <a href="./blog.html" class="active">Blog</a>
+            <a class="buttonContact" href="./contact.html">Contact Me</a>
+        </div>
+
+        <center><h1>ADD MY PROJECT</h1></center>
+        <div class="container">
+        <form class="formP" onsubmit="getBlog(event)">
+            <div class='field'>
+                <label>Project Name</label>
+                <input type="text" class="text-input shadow" id="title">
+            </div>
+            <div class="field field2">
+                <div class=''>
+                    <label>Start Date</label>
+                    <input type="date" class="text-input shadow" id="start">
+                </div>
+                <div class=''>
+                    <label>End Date</label>
+                    <input type="date" class="text-input shadow" id="end">
+                </div>
+            </div>
+            <div class='field'>
+                <label>Description</label> 
+                <textarea name="description" id="description" cols="30" rows="5" class="text-input shadow" style="resize:none;"></textarea>
+            </div>
+            <div class='field'>
+                <label>Technologies</label>
+            </div>
+            <div class='field cek'>
+                <div>
+                    <input type="checkbox" class="inputBox shadow" id="nodeBox">
+                    <label for="nodeCheckbox">Node Js</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="inputBox shadow" value="next" id="nextBox">
+                    <label for="nextCheckbox">Next Js</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="inputBox shadow" value="react" id="reactBox">
+                    <label for="showImage">React Js</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="inputBox shadow" value="typeScript" id="typeBox">
+                    <label for="typeScriptCheckbox">TypeScript</label>
+                </div>
+            </div>
+            <div class="field">
+                <label>Upload Image</label>
+                <input type="file" class="text-input shadow" id="img" required>
+            </div>
+            <div class="field">
+                <button type="submit" class="submitProject shadow" >submit</button>
+            </div>
+        </form>
+        </div>
+
+        <div class="bodyProject">
+            <center><h1>MY PROJECT</h1></center>
+            <div class="BP" id="content">
+                
+            </div>
+        </div>
+
+    </body>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/myProject.js"></script>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>My Project</title>
+    </head>
+    <style>
+
+    .field2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+
+
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <body class="" onload="test()">
+        <nav>
+            <div class="nav-left">
+                <ul>
+                    <img class="dumbLogo" src="./assets/logo.png" alt="logo" >
+                    <li><a href="./index.html" class="active">Home</a></li>
+                    <li><a href="./myProject.html">My Project</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div>
+                    <a class="right" href="./contactMe.html">Contact Me</a>
+                </div>
+                <div class="burger" >
+                    <button id="button" href="" class="toggle-button" >
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="mobileNav" id="mobileNav">
+            <a href="./index.html" class="active">Home</a>
+            <a href="./myProject.html">My Project</a>
+            <a class="buttonContact" href="./contactMe.html">Contact Me</a>
+        </div>
+        
+
+
+            
+    </body>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/myProject.js"></script>
+</html> -->

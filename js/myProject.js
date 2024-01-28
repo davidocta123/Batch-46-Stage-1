@@ -1,0 +1,138 @@
+let blogs = []
+
+function test(){
+    const today = new Date();
+    const monthSet = new Date().setMonth(today.getMonth() + 3);
+    const date = today.toLocaleDateString();  
+    let data = {
+        title: "Apa itu Kotlin",
+        start: date,
+        end: monthSet,
+        postAt: today,
+        description: `Kotlin adalah bahasa pemrograman modern, disajikan secara statis yang berjalan pada platform Java Virtual Machine (JVM). Kotlin menggunakan compiler LLVM yang artinya, dapat dikompilasi ke dalam kode JavaScript. Bahasa pemrograman yang satu ini banyak diminati oleh para developer. Terutama bagi kamu yang ingin jadi developer Android, pakailah bahasa yang satu ini.`,
+        image: "./assets/kotlin.png",
+        node: true,
+        next: true,
+        react: true,
+        typescript: true,
+    }
+    blogs.push(data)
+    renderBlog()
+}
+
+function getBlog(event){
+    event.preventDefault()
+
+    let title = document.getElementById("title").value
+    let start = document.getElementById("start").value
+    let end = document.getElementById("end").value
+    let description = document.getElementById("description").value
+    let image = document.getElementById("img").files
+    let node = document.getElementById("nodeBox").checked
+    let next = document.getElementById("nextBox").checked
+    let react = document.getElementById("reactBox").checked
+    let typescript = document.getElementById("typeBox").checked
+    
+    image = URL.createObjectURL(image[0]);
+
+    if(title == "") {
+        return alert("title Tidak Boleh Kosong")
+    } else if(start == "") {
+        return alert("Start Tidak Boleh Kosong")
+    } else if(end == "") {
+        return alert("End Tidak Boleh Kosong")
+    } else if(start > end) {
+        return alert("End Date Tidak Boleh Kurang dari Start Date")
+    } else if(description == "") {
+        return alert("description Tidak Boleh Kosong")
+    }
+    
+    let blog = {
+        title,
+        start,
+        end,
+        postAt:new Date(),
+        description,
+        image,
+        node,
+        next,
+        react,
+        typescript,
+    }
+    
+    blogs.push(blog)    
+    console.log(blogs)
+    renderBlog()
+}
+
+function renderBlog() {
+    document.getElementById("content").innerHTML = ""
+    for(let i = 0; i < blogs.length; i++) {
+        document.getElementById("content").innerHTML += `
+        <div class="item">
+            <div class="header">
+                <img src="${blogs[i].image}" alt="img" class="image">
+                <a href="./blogDetail.html" for="name" class="nameProj">${blogs[i].title}</a>
+                <br>
+                <label for="duration" class="duration">durasi : ${createDuration(blogs[i].start, blogs[i].end)}</label><br>
+                <label for="durationT" class="duration">${getPosted(blogs[i].postAt)}</label>
+            </div>
+            <div class="itemContent">
+                <label for="description" class="description">${blogs[i].description} </label>
+            </div>
+                <div>
+                ${blogs[i].node ?  '<img src="./assets/node.png" alt="logo" class="logo">' : ''}
+                ${blogs[i].next ?  '<img src="./assets/next.png" alt="logo" class="logo">' : ''}
+                ${blogs[i].react ?  '<img src="./assets/react.png" alt="logo" class="logo">' : ''}
+                ${blogs[i].typescript ?  '<img src="./assets/typescript.png" alt="logo" class="logo">' : ''}
+                </div>
+            <div class="contentButton">
+                <a href="#" class="tombol">edit</a>
+                <a href="#" class="tombol">delete</a>
+            </div>
+        </div>`
+    }
+}
+
+function createDuration(start, end) {
+    let distance = new Date(end) - new Date(start)
+    // Valid
+    const dayDistance = Math.floor(distance / ( 24 * 60 * 60 * 1000 ))
+    const monthDistance = Math.floor(distance /( 30 * 24 * 60 * 60 * 1000 ))
+    const yearDistance = Math.floor(distance /( 12 * 30 * 24 * 60 * 60 * 1000 ))
+
+    if( dayDistance > 0 && dayDistance <= 29 ){
+        return `${dayDistance} Hari `
+    }else if(dayDistance >= 30 && monthDistance <= 12){ 
+        return monthDistance + " Bulan"
+    }else if(monthDistance >= 12){ 
+        return yearDistance + " Tahun"
+    }else if(dayDistance >= 0 && dayDistance <= 24){ 
+        return "1 hari"
+    }
+ }
+
+function getPosted(time){
+    const posted = new Date() - new Date(time)
+    const dayPosted = Math.floor(posted / ( 24 * 60 * 60 * 1000 ))
+    if(dayPosted > 0) {
+        return dayPosted + " day ago"
+    }else {
+        const hourPosted = Math.floor(posted/ ( 60* 60* 1000))
+        if(hourPosted > 0 ){
+            return hourPosted + " hour ago"
+        }else {
+            const minutesPosted = Math.floor(posted / ( 60 * 1000))
+            if(minutesPosted > 0 ){
+                return minutesPosted + " minutes ago"
+            } else{
+                const secondPosted = Math.floor(posted/1000)
+                if(secondPosted > 0) {
+                    return secondPosted + " second ago"
+                }
+            }
+        }
+    }
+}
+
+setInterval(renderBlog, 1000)

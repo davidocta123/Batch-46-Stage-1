@@ -1,0 +1,583 @@
+
+
+
+/* GLOBAL */
+.shadow{
+    box-shadow: 0 5px 10px rgb(190, 190, 190);
+}
+
+body{
+    background-color: #f3f3f3;
+    margin: 0;
+    font-family: comic sans ms;
+    
+}
+/* GLOBAL */
+
+/* Index */
+.bodyContent{
+    margin: 10%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bodyItem{
+    background-color: aliceblue;
+}
+
+.grid1{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: justify;
+}
+    
+.grid2{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.grid3{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    padding-top: 20px;
+    text-decoration:none;
+    border: none;
+}
+
+.medLogo{
+    width: 45px;
+}
+
+.tengah{
+    margin-right:25px;
+}
+
+.prof{
+    display: flex;
+    align-items: center;
+}
+
+.grid4{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    background-color: rgb(235, 235, 235);
+    align-items: center;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.button{
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.button:hover{
+    background-color: rgb(49, 187, 229);
+}
+
+.downLogo{
+    width: 20px;
+    height: 20px;
+}
+    
+.profile{
+    width: 300px;
+    border-radius: 10px 10px 0 0;
+}
+
+@media only screen and (max-width: 925px) {
+    .bodyContent{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid4{
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .grid3{
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .prof{
+        display: flex;
+        justify-content: center;
+    }
+
+  }
+
+
+    
+/* Index */
+
+/* MY DETAIL */
+.bodyDetail{
+    margin: 0 auto;
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bodyDetail .head{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bodyDetail .contentDetail .items1{
+    width: 700px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.bodyDetail .contentDetail{
+    display: grid;
+    
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .items1 {
+    grid-column: 1;
+    grid-row: 1 ;
+  }
+  
+  .items2 {
+    grid-column: 2;
+    grid-row: 1 ;
+  }
+
+  .items2 .headerDuration{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  
+  .items2 .bodyDuration{
+      font-size: 20px;
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .items2 .bodyDuration label{
+        margin-top: 5px;
+        margin-left: 10px;
+        color: #6c6c6c;
+      }
+    
+      .items2 .durationLogo{
+      width: 40px;
+    }
+
+.headerTech{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+
+.techLogo{
+    width: 40px;
+  }
+
+  .items3 .bodyDuration{
+    font-size: 20px;
+    display: flex;
+  }
+
+  .items3 .bodyDuration.dot{
+    display: grid;
+    justify-content: start;
+    gap: 20px 1em;
+    grid-template-columns: auto auto;
+}
+
+  .items3 .bodyDuration label{
+      margin-top: 5px;
+      margin-left: 10px;
+      color: #6c6c6c;
+    }
+  
+  .items4 {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    text-align: justify;
+  }
+
+  .items4 p{
+    font-size: 16px;
+  }
+
+/* MY PROJECT */
+.bodyP{
+    background-color: #d0d0d0;
+    margin: 0;
+    font-family: comic sans ms;
+}
+
+.formP {
+    font-size: 20px;
+    max-width: 30em;
+    margin: 5% auto;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+
+.formP .text-input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    font-family: Comic Sans Ms;
+    font-size: 20px;
+}
+
+.formP .field {
+    width: 100%;
+    margin: 0 0 1em 0;
+}
+.formP .field.field2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.formP .field.half {
+    width: calc(50% - 5px);
+}
+
+.formP .submitProject{
+    float: right;
+}
+
+.cek{
+    display: grid;
+    justify-content: start;
+    gap: 1em 4em;
+    grid-template-columns: auto auto;
+}
+
+.submitProject{
+    font-family: Comic Sans Ms;
+    border-radius: 20px;
+    padding: 5px 30px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.inputBox{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 10px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.inputBox:checked {
+    background-color: gray;
+}
+
+
+
+.bodyProject{
+    background-color: rgb(238, 238, 238);
+    padding: 2em;
+}
+
+.BP{
+    display: flex;
+    flex-direction: center;
+    
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.BP .item{
+    background-color: #ffffff;
+    max-width:min-content;
+    margin: 1em 1em;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(119, 119, 119);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.BP .item .image{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.BP .item .header .nameProj{
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+}
+
+.BP .item .header .duration{
+    font-size: 12px;
+    color: #acacac;
+    
+}
+
+.BP .item .description{
+    font-size: 12px;
+    color: #000000;
+    padding-bottom: 15px;
+    text-align: justify;
+}
+
+.BP .item .itemContent{
+    padding: 15px 0;
+}
+
+.BP .item .logo{
+    width: 30px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.BP .item .contentButton{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tombol{
+    text-align: center;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    width: calc(50% - 1px);
+    
+}
+/* MY PROJECT */
+  
+/* Contact ME */
+.bodyContact{
+    margin: 0 10%;
+}
+
+.form{
+    font-size: 20px;
+    max-width: 30em;
+    margin: 2em auto;
+}
+
+.input{
+    
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    font-family: Comic Sans Ms;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    
+}
+
+.submit{
+    font-family: Comic Sans Ms;
+    border-radius: 20px;
+    padding: 5px 30px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.buttonSubmit{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Contact ME */
+
+
+
+/* Navbar */
+
+nav {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: #dbdbdb;
+    padding: 0 40px;
+    font-size: 20px;
+}
+
+nav img {
+    margin-right: 50px;
+}
+
+.nav-left ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+.nav-left ul li {
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.nav-right .right {
+    border-radius: 10px;
+    padding: 5px 20px; 
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.active{
+    font-weight: bold;
+}
+
+/* Navbar */
+
+/* Navbar Responsive */
+.mobileNav{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: aliceblue;
+        transition: all 5s ease;
+    }
+
+    .mobileNav-active{
+        display: flex;
+        background-color: aliceblue;
+    }
+
+    .mobileNav a{
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    .mobileNav .buttonContact{
+        border-radius: 10px;
+        padding: 5px 20px; 
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+        margin-right: 10px;
+    }
+    .burger{
+        display: flex;
+    }
+
+    .toggle-button{
+        position: absolute;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        margin-top: 5px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+    }
+
+    .toggle-button .bar {
+        height: 3px;
+        width: 130%;
+        background-color: white;
+        border-radius: 10px;
+        transition: 2ms;
+    }
+
+    .nav-right{
+    display: flex;
+    flex-direction: row;
+    }
+
+    .nav-right .burger{
+            display: none;
+        }
+
+    @media only screen and (min-width: 651px) {
+        .mobileNav{
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        .nav-left a {
+            display: none;
+        }
+
+        .nav-right .right{
+            display: none;
+        }
+
+        .nav-right .burger{
+            display: flex;
+            align-items: center;
+            margin-right: 60px;
+        }
+
+    }
+/* Navbar Responsive */
+ 
